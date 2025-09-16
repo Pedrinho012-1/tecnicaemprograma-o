@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificador de Idade - JavaScript</title>
+  <style>
+    #resposta {
+      font: bold 16px Arial, sans-serif;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Verificador de Idade - JavaScript</h1>
+
+  <form onsubmit="return false;">
+    <label for="idade">Digite sua idade:</label>
+    <input type="text" id="idade" name="idade" />
+    <button onclick="verificarIdade()">Verificar</button>
+  </form>
+
+  <hr>
+  <p>Você é considerado:</p>
+  <p id="resposta"></p>
+
+  <script>
+    function verificarIdade() {
+      let idade = parseInt(document.getElementById("idade").value);
+      let resultado = "";
+
+      // Verifica se o valor é um número válido
+      if (isNaN(idade)) {
+        resultado = "Por favor, digite um número válido.";
+      } else if (idade < 0) {
+        resultado = "Você ainda não nasceu.";
+      } else {
+        // if/else para idade
+        if (idade >= 18) {
+          resultado = "Você é maior de idade.";
+        } else {
+          resultado = "Você é menor de idade.";
+        }
+
+        // switch adicional para mensagens específicas
+        switch (idade) {
+          case 1:
+          case 2:
+          case 3:
+            resultado += " Você ainda é um bebê!";
+            break;
+          case 13:
+            resultado += " Você é um adolescente.";
+            break;
+          case 18:
+            resultado += " Parabéns pela maioridade!";
+            break;
+          case 60:
+            resultado += " Você atingiu a terceira idade.";
+            break;
+          default:
+            // Nenhuma mensagem especial
+            break;
+        }
+      }
+
+      document.getElementById("resposta").innerText = resultado;
+    }
+  </script>
+</body>
+</html>
