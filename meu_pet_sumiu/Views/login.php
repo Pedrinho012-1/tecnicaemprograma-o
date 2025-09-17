@@ -15,12 +15,14 @@
     <label for="senha" class="form-label">Senha</label>
     <input type="password" class="form-control" id="senha" name="senha">
   </div>
+  
   <div class="col-md-6 text-danger"><?php echo $msg[0];?></div>
   <div class="col-md-6 text-danger"><?php echo $msg[1];?></div>
   <div class="col-12">
     <button type="submit" class="btn btn-primary">Enviar</button>
   </div>
-</form>
+ </form>
+ <a href="index.php?controle=usuarioController&metodo=esqueci_senha">Esqueci minha senha</a>
 </div>
 </div>
 </body>
