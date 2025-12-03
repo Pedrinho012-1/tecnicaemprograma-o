@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    font-family: "Roboto", sans-serif;
+}
+
+.cabecario {
+    justify-content: space-around;
+    display: flex;
+    width: 100%;
+}
+
+body {
+    background-color: #2B3035;
+}
+
+ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+li {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: aquamarine;
+    font-size: 20px;
+}
